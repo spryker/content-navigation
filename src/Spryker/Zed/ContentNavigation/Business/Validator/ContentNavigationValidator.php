@@ -26,10 +26,6 @@ class ContentNavigationValidator implements ContentNavigationValidatorInterface
      */
     protected $contentNavigationConstraintsProvider;
 
-    /**
-     * @param \Spryker\Zed\ContentNavigation\Dependency\External\ContentNavigationToValidationAdapterInterface $validationAdapter
-     * @param \Spryker\Zed\ContentNavigation\Business\Validator\ContentNavigationConstraintsProviderInterface $contentNavigationConstraintsProvider
-     */
     public function __construct(
         ContentNavigationToValidationAdapterInterface $validationAdapter,
         ContentNavigationConstraintsProviderInterface $contentNavigationConstraintsProvider
@@ -38,11 +34,6 @@ class ContentNavigationValidator implements ContentNavigationValidatorInterface
         $this->contentNavigationConstraintsProvider = $contentNavigationConstraintsProvider;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ContentNavigationTermTransfer $contentNavigationTermTransfer
-     *
-     * @return \Generated\Shared\Transfer\ContentValidationResponseTransfer
-     */
     public function validateContentNavigationTerm(ContentNavigationTermTransfer $contentNavigationTermTransfer): ContentValidationResponseTransfer
     {
         $isSuccess = true;
@@ -65,12 +56,6 @@ class ContentNavigationValidator implements ContentNavigationValidatorInterface
         return $contentValidationResponseTransfer->setIsSuccess($isSuccess);
     }
 
-    /**
-     * @param string $parameter
-     * @param \Symfony\Component\Validator\ConstraintViolationListInterface $violations
-     *
-     * @return \Generated\Shared\Transfer\ContentParameterMessageTransfer
-     */
     protected function createContentParameterMessageTransfer(string $parameter, ConstraintViolationListInterface $violations): ContentParameterMessageTransfer
     {
         $contentParameterMessageTransfer = (new ContentParameterMessageTransfer())->setParameter($parameter);

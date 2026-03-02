@@ -58,9 +58,6 @@ class ContentNavigationClientTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testExecuteNavigationTypeByKeyWithValidTermShouldReturnContentNavigationTypeTransfer(): void
     {
         // Arrange
@@ -80,9 +77,6 @@ class ContentNavigationClientTest extends Unit
         $this->assertSame(ContentNavigationTypeTransfer::class, get_class($contentNavigationTypeTransfer));
     }
 
-    /**
-     * @return void
-     */
     public function testExecuteNavigationTypeByKeyWithWrongTermThrowsException(): void
     {
         // Arrange
@@ -102,9 +96,6 @@ class ContentNavigationClientTest extends Unit
             ->executeNavigationTypeByKey(static::CONTENT_KEY, static::LOCALE);
     }
 
-    /**
-     * @return void
-     */
     public function testExecuteNavigationTypeByKeyWithNotExistingContentNavigationShouldReturnNull(): void
     {
         // Arrange
@@ -118,11 +109,6 @@ class ContentNavigationClientTest extends Unit
         $this->assertNull($contentNavigationTypeTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ContentTypeContextTransfer|null $contentTypeContextTransfer
-     *
-     * @return void
-     */
     protected function setNavigationStorageClientReturn(?ContentTypeContextTransfer $contentTypeContextTransfer): void
     {
         $contentNavigationToContentStorageClientBridge = $this
@@ -137,9 +123,6 @@ class ContentNavigationClientTest extends Unit
         );
     }
 
-    /**
-     * @return \Spryker\Client\ContentNavigation\ContentNavigationClientInterface
-     */
     protected function createContentNavigationClient(): ContentNavigationClientInterface
     {
         return new ContentNavigationClient();

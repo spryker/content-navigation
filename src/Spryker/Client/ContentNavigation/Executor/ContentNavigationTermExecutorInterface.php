@@ -12,10 +12,5 @@ use Generated\Shared\Transfer\ContentTypeContextTransfer;
 
 interface ContentNavigationTermExecutorInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ContentTypeContextTransfer $contentTypeContextTransfer
-     *
-     * @return \Generated\Shared\Transfer\ContentNavigationTypeTransfer
-     */
     public function execute(ContentTypeContextTransfer $contentTypeContextTransfer): ContentNavigationTypeTransfer;
 }

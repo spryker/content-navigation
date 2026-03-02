@@ -11,11 +11,5 @@ use Generated\Shared\Transfer\ContentTypeContextTransfer;
 
 interface ContentNavigationToContentStorageClientInterface
 {
-    /**
-     * @param string $contentKey
-     * @param string $localeName
-     *
-     * @return \Generated\Shared\Transfer\ContentTypeContextTransfer|null
-     */
     public function findContentTypeContextByKey(string $contentKey, string $localeName): ?ContentTypeContextTransfer;
 }

@@ -29,11 +29,6 @@ class ContentNavigationDependencyProvider extends AbstractBundleDependencyProvid
      */
     public const ADAPTER_VALIDATION = 'ADAPTER_VALIDATION';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideBusinessLayerDependencies(Container $container): Container
     {
         $container = parent::provideBusinessLayerDependencies($container);
@@ -43,11 +38,6 @@ class ContentNavigationDependencyProvider extends AbstractBundleDependencyProvid
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addNavigationFacade(Container $container): Container
     {
         $container->set(static::FACADE_NAVIGATION, function (Container $container): ContentNavigationToNavigationFacadeInterface {
@@ -59,11 +49,6 @@ class ContentNavigationDependencyProvider extends AbstractBundleDependencyProvid
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addValidationAdapter(Container $container): Container
     {
         $container->set(static::ADAPTER_VALIDATION, function (): ContentNavigationToValidationAdapterInterface {

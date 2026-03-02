@@ -13,11 +13,6 @@ use Generated\Shared\Transfer\ContentTypeContextTransfer;
 
 class ContentTermToNavigationTypeExecutor implements ContentNavigationTermExecutorInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ContentTypeContextTransfer $contentTypeContextTransfer
-     *
-     * @return \Generated\Shared\Transfer\ContentNavigationTypeTransfer
-     */
     public function execute(ContentTypeContextTransfer $contentTypeContextTransfer): ContentNavigationTypeTransfer
     {
         $navigationTermTransfer = $this->mapContentTypeParametersToTransfer($contentTypeContextTransfer);
@@ -25,11 +20,6 @@ class ContentTermToNavigationTypeExecutor implements ContentNavigationTermExecut
         return (new ContentNavigationTypeTransfer())->fromArray($navigationTermTransfer->modifiedToArray(), true);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ContentTypeContextTransfer $contentTypeContextTransfer
-     *
-     * @return \Generated\Shared\Transfer\ContentNavigationTermTransfer
-     */
     protected function mapContentTypeParametersToTransfer(ContentTypeContextTransfer $contentTypeContextTransfer): ContentNavigationTermTransfer
     {
         return (new ContentNavigationTermTransfer())->fromArray($contentTypeContextTransfer->getParameters(), true);

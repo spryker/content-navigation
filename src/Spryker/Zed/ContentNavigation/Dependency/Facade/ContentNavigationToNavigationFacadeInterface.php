@@ -12,10 +12,5 @@ use Generated\Shared\Transfer\NavigationTransfer;
 
 interface ContentNavigationToNavigationFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\NavigationCriteriaTransfer $navigationCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\NavigationTransfer|null
-     */
     public function findNavigationByCriteria(NavigationCriteriaTransfer $navigationCriteriaTransfer): ?NavigationTransfer;
 }

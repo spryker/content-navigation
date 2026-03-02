@@ -18,9 +18,6 @@ class ContentNavigationConstraintsProvider implements ContentNavigationConstrain
      */
     protected $navigationKeyExistsConstraint;
 
-    /**
-     * @param \Symfony\Component\Validator\Constraint $navigationKeyExistsConstraint
-     */
     public function __construct(Constraint $navigationKeyExistsConstraint)
     {
         $this->navigationKeyExistsConstraint = $navigationKeyExistsConstraint;

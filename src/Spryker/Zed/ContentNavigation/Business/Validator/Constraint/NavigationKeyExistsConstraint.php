@@ -27,17 +27,11 @@ class NavigationKeyExistsConstraint extends Constraint
      */
     protected $navigationFacade;
 
-    /**
-     * @return string
-     */
     public function getMessage(): string
     {
         return static::MESSAGE;
     }
 
-    /**
-     * @return \Spryker\Zed\ContentNavigation\Dependency\Facade\ContentNavigationToNavigationFacadeInterface
-     */
     public function getNavigationFacade(): ContentNavigationToNavigationFacadeInterface
     {
         return $this->navigationFacade;

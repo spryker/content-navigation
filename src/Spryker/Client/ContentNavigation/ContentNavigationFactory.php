@@ -17,9 +17,6 @@ use Spryker\Shared\ContentNavigation\ContentNavigationConfig;
 
 class ContentNavigationFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Client\ContentNavigation\Mapper\ContentNavigationTypeMapperInterface
-     */
     public function createContentNavigationTypeMapper(): ContentNavigationTypeMapperInterface
     {
         return new ContentNavigationTypeMapper(
@@ -38,17 +35,11 @@ class ContentNavigationFactory extends AbstractFactory
         ];
     }
 
-    /**
-     * @return \Spryker\Client\ContentNavigation\Executor\ContentNavigationTermExecutorInterface
-     */
     public function createContentNavigationTermExecutor(): ContentNavigationTermExecutorInterface
     {
         return new ContentTermToNavigationTypeExecutor();
     }
 
-    /**
-     * @return \Spryker\Client\ContentNavigation\Dependency\Client\ContentNavigationToContentStorageClientInterface
-     */
     public function getContentStorageClient(): ContentNavigationToContentStorageClientInterface
     {
         return $this->getProvidedDependency(ContentNavigationDependencyProvider::CLIENT_CONTENT_STORAGE);

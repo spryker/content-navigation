@@ -23,9 +23,6 @@ use Symfony\Component\Validator\Constraint;
  */
 class ContentNavigationBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\ContentNavigation\Business\Validator\ContentNavigationValidatorInterface
-     */
     public function createContentNavigationValidator(): ContentNavigationValidatorInterface
     {
         return new ContentNavigationValidator(
@@ -34,17 +31,11 @@ class ContentNavigationBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ContentNavigation\Business\Validator\ContentNavigationConstraintsProviderInterface
-     */
     public function createContentNavigationConstraintsProvider(): ContentNavigationConstraintsProviderInterface
     {
         return new ContentNavigationConstraintsProvider($this->createNavigationKeyExistsConstraint());
     }
 
-    /**
-     * @return \Symfony\Component\Validator\Constraint
-     */
     public function createNavigationKeyExistsConstraint(): Constraint
     {
         return new NavigationKeyExistsConstraint([
@@ -52,17 +43,11 @@ class ContentNavigationBusinessFactory extends AbstractBusinessFactory
         ]);
     }
 
-    /**
-     * @return \Spryker\Zed\ContentNavigation\Dependency\Facade\ContentNavigationToNavigationFacadeInterface
-     */
     public function getNavigationFacade(): ContentNavigationToNavigationFacadeInterface
     {
         return $this->getProvidedDependency(ContentNavigationDependencyProvider::FACADE_NAVIGATION);
     }
 
-    /**
-     * @return \Spryker\Zed\ContentNavigation\Dependency\External\ContentNavigationToValidationAdapterInterface
-     */
     public function getValidationAdapter(): ContentNavigationToValidationAdapterInterface
     {
         return $this->getProvidedDependency(ContentNavigationDependencyProvider::ADAPTER_VALIDATION);

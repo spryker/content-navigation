@@ -28,9 +28,6 @@ class ContentNavigationFacadeTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testValidateContentNavigationTermWillReturnErrorMessageIfNavigationDoesNotExists(): void
     {
         //Arrange
@@ -49,9 +46,6 @@ class ContentNavigationFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testValidateContentNavigationTermWillReturnSuccessfulResponseIfNavigationExists(): void
     {
         //Arrange
@@ -70,11 +64,6 @@ class ContentNavigationFacadeTest extends Unit
         );
     }
 
-    /**
-     * @param string $navigationKey
-     *
-     * @return \Generated\Shared\Transfer\ContentNavigationTermTransfer
-     */
     protected function createContentNavigationTermTransfer(string $navigationKey): ContentNavigationTermTransfer
     {
         return (new ContentNavigationTermTransfer())->setNavigationKey($navigationKey);
