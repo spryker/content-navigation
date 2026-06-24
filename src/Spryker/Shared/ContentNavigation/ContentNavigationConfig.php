@@ -12,6 +12,8 @@ use Spryker\Shared\Kernel\AbstractSharedConfig;
 class ContentNavigationConfig extends AbstractSharedConfig
 {
     /**
+     * @api
+     *
      * Content item navigation
      *
      * @var string
@@ -19,6 +21,8 @@ class ContentNavigationConfig extends AbstractSharedConfig
     public const CONTENT_TYPE_NAVIGATION = 'Navigation';
 
     /**
+     * @api
+     *
      * Content item navigation
      *
      * @var string
@@ -26,6 +30,8 @@ class ContentNavigationConfig extends AbstractSharedConfig
     public const CONTENT_TERM_NAVIGATION = 'Navigation';
 
     /**
+     * @api
+     *
      * Content item navigation tree-inline template identifier
      *
      * @var string
@@ -33,6 +39,8 @@ class ContentNavigationConfig extends AbstractSharedConfig
     public const WIDGET_TEMPLATE_IDENTIFIER_TREE_INLINE = 'tree-inline';
 
     /**
+     * @api
+     *
      * Content item navigation tree template identifier
      *
      * @var string
@@ -40,6 +48,8 @@ class ContentNavigationConfig extends AbstractSharedConfig
     public const WIDGET_TEMPLATE_IDENTIFIER_TREE = 'tree';
 
     /**
+     * @api
+     *
      * Content item navigation list-inline template identifier
      *
      * @var string
@@ -47,6 +57,8 @@ class ContentNavigationConfig extends AbstractSharedConfig
     public const WIDGET_TEMPLATE_IDENTIFIER_LIST_INLINE = 'list-inline';
 
     /**
+     * @api
+     *
      * Content item navigation list template identifier
      *
      * @var string
@@ -54,6 +66,8 @@ class ContentNavigationConfig extends AbstractSharedConfig
     public const WIDGET_TEMPLATE_IDENTIFIER_LIST = 'list';
 
     /**
+     * @api
+     *
      * Content item navigation function name
      *
      * @var string
